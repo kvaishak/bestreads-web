@@ -8,7 +8,7 @@ function App() {
             <div className="flex w-full rounded-lg xl:w-3/4 lg:w-11/12 lg:shadow-xl ">
                 <div className="relative hidden w-full h-auto bg-cover border-r rounded-l-lg bg-blue-1300 lg:block lg:w-6/12">
                     <div className="relative z-10 m-12 text-left ">
-                        <a className="flex items-center w-32 font-medium text-gray-900 title-font md:mb-6">
+                        <a className="flex items-center w-32 font-medium text-gray-900 title-font md:mb-6" href="https://www.google.com/">
                             <img src="../badges/WhitePink.svg" alt="" />
                         </a>
                         <h2 className="mt-12 mb-2 text-2xl font-semibold tracking-tighter text-blue-700 sm:text-3xl title-font">
