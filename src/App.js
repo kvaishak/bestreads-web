@@ -102,7 +102,7 @@ function App() {
                                         id="confirm" type="text" placeholder="Confirm" />
                                 </div>
                             </div>
-                            <button type="submit" className="block w-full px-4 py-3 mt-6 font-semibold text-white transition duration-500 ease-in-out transform rounded-lg bg-gradient-to-r from-blue-700 hover:from-blue-500 to-blue-500 hover:to-blue-700 focus:shadow-outline focus:outline-none">Log In</button>
+                            <button type="submit" className="block w-full px-4 py-3 mt-6 font-semibold text-white transition duration-500 ease-in-out transform rounded-lg bg-gradient-to-r from-blue-700 hover:from-blue-500 to-blue-500 hover:to-blue-700 focus:shadow-outline focus:outline-none">Sign up</button>
                         </form>
                         <p className="mt-8 text-center">Already have an account? <a href="https://www.google.com/"
                                 className="font-semibold text-blue-500 hover:text-blue-700">Sign
