@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import App from './containers/App';
 
-test('check if the Sign in text is visible', () => {
+test('check if the Best Reads text is visible', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Sign in/i);
+  const linkElement = screen.getByText(/Best Reads/i);
   expect(linkElement).toBeInTheDocument();
 });
