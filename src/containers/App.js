@@ -1,17 +1,20 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import SignUpUI from '../components/SignUpUI/SignUpUI';
+import SignUp from './SignUp/SignUp';
 import LogInUI from '../components/LogInUI/LogInUI';
 import Home from '../components/Home/Home';
+import { AuthProvider } from '../utils/auth/AuthContext';
 
 function App() {
   return (
             <Router>
-              <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/signup"  component={SignUpUI} />
-                <Route path="/login"  component={LogInUI} />
-              </Switch>
+              <AuthProvider>
+                <Switch>
+                  <Route path="/" exact component={Home} />
+                  <Route path="/signup"  component={SignUp} />
+                  <Route path="/login"  component={LogInUI} />
+                </Switch>
+              </AuthProvider>
             </Router>
   );
 }

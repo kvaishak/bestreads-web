@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function SignUpUI() {
+function SignUpUI(props) {
   return (
     <section className="flex flex-col items-center h-screen md:flex-row">
         <div className="container mx-auto">
@@ -76,7 +76,7 @@ function SignUpUI() {
                                 <div className="mt-4">
                                     <label className="block text-base font-medium leading-relaxed text-gray-700">Email
                                         Address</label>
-                                    <input type="email" name="" id="" placeholder="Your Email "
+                                    <input type="email" name="" id="" placeholder="Your Email " ref={props.emailRef}
                                         className="w-full px-4 py-2 mt-2 text-base bg-gray-100 border-transparent rounded-lg ext-blue-700 focus:border-gray-500"
                                         autoFocus autoComplete="true" required />
                                 </div>
@@ -88,7 +88,7 @@ function SignUpUI() {
                                         </label>
                                         <input
                                             className="block w-full px-4 py-2 mt-2 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg ext-blue-700 focus:border-gray-500"
-                                            id="password" type="text" placeholder="Your Password" />
+                                            id="password" type="text" placeholder="Your Password"  ref={props.passwordRef}/>
                                         <p className="mt-1 text-xs italic text-blue-500">Please fill out this field.</p>
                                     </div>
                                     <div className="w-full px-3 md:w-1/2">
@@ -98,10 +98,10 @@ function SignUpUI() {
                                         </label>
                                         <input
                                             className="block w-full px-4 py-2 mt-2 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg ext-blue-700 focus:border-gray-500 "
-                                            id="confirm" type="text" placeholder="Confirm" />
+                                            id="confirm" type="text" placeholder="Confirm"  ref={props.confirmPasswordRef}/>
                                     </div>
                                 </div>
-                                <button type="submit" className="block w-full px-4 py-3 mt-6 font-semibold text-white transition duration-500 ease-in-out transform rounded-lg bg-gradient-to-r from-blue-700 hover:from-blue-500 to-blue-500 hover:to-blue-700 focus:shadow-outline focus:outline-none">Sign up</button>
+                                <button type="submit" onClick={props.handleSubmit} className="block w-full px-4 py-3 mt-6 font-semibold text-white transition duration-500 ease-in-out transform rounded-lg bg-gradient-to-r from-blue-700 hover:from-blue-500 to-blue-500 hover:to-blue-700 focus:shadow-outline focus:outline-none">Sign up</button>
                             </form>
                             <p className="mt-8 text-center">Already have an account? <span 
                                     className="font-semibold text-blue-500 hover:text-blue-700">
