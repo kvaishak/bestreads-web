@@ -25,7 +25,7 @@ const SignUp = () => {
 
             console.log("New User = ", currentUser);
 
-            // history.push("/profile");
+            history.push("/profile");
         }catch(e){
             setError('Failed to Create Account');
         }

@@ -24,12 +24,10 @@ const SignUp = () => {
         try{
             setError('');
             setLoading(true);
+            
+            await signUp(emailRef.current.value, passwordRef.current.value);
 
-            var currentUser = await signUp(emailRef.current.value, passwordRef.current.value);
-
-            console.log("New User = ", currentUser);
-
-            // history.push("/profile");
+            history.replace("/profile");
         }catch(e){
             setError('Failed to Create Account');
         }
