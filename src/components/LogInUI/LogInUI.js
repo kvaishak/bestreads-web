@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function LogInUI() {
+function LogInUI(props) {
   return (
     <section className="flex flex-col items-center h-screen md:flex-row ">
                 <div className="hidden w-full h-screen bg-gray-400 lg:block md:w-1/3 xl:w-2/3">
@@ -59,13 +59,13 @@ function LogInUI() {
                             <div>
                                 <label className="block text-sm font-medium leading-relaxed tracking-tighter text-gray-700">Email
                                     Address</label>
-                                <input type="email" name="" id="" placeholder="Your Email "
+                                <input type="email" name="" id="" placeholder="Your Email " ref={props.emailRef}
                                     className="w-full px-4 py-2 mt-2 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0 "
                                     autoFocus autoComplete="true" required />
                             </div>
                             <div className="mt-4">
                                 <label className="block text-sm font-medium leading-relaxed tracking-tighter text-gray-700">Password</label>
-                                <input type="password" name="" id="" placeholder="Your Password" minLength="6"
+                                <input type="password" name="" id="" placeholder="Your Password" minLength="6" ref={props.passwordRef}
                                     className="w-full px-4 py-2 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0"
                                     required />
                             </div>
@@ -74,7 +74,7 @@ function LogInUI() {
                                     className="text-sm font-semibold leading-relaxed text-gray-700 hover:text-blue-700 focus:text-blue-700">Forgot
                                     Password?</a>
                             </div>
-                            <button type="submit" className="block w-full px-4 py-3 mt-6 font-semibold text-white transition duration-500 ease-in-out transform rounded-lg bg-gradient-to-r from-blue-700 hover:from-blue-600 to-blue-600 hover:to-blue-700 focus:shadow-outline focus:outline-none">Log In</button>
+                            <button type="submit" onClick={props.handleSubmit} className="block w-full px-4 py-3 mt-6 font-semibold text-white transition duration-500 ease-in-out transform rounded-lg bg-gradient-to-r from-blue-700 hover:from-blue-600 to-blue-600 hover:to-blue-700 focus:shadow-outline focus:outline-none">Log In</button>
                         </form>
                        
                         <p className="mt-8 text-center">Need an account? <span
