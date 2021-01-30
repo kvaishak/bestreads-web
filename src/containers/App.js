@@ -1,17 +1,30 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import SignUpUI from '../components/SignUpUI';
-import LogInUI from '../components/LogInUI';
-import Home from '../components/Home';
+
+import { AuthProvider } from '../utils/auth/AuthContext';
+
+import SignUp from './SignUp/SignUp';
+import Login from './LogIn/LogIn';
+import Profile from './Profile/Profile';
+
+import Home from '../components/Home/Home';
+import PrivateRoute from '../HOC/PrivateRoute';
+
 
 function App() {
   return (
             <Router>
-              <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/signup"  component={SignUpUI} />
-                <Route path="/login"  component={LogInUI} />
-              </Switch>
+              <AuthProvider>
+                <Switch>
+                  <Route path="/" exact component={Home} />
+
+                  <Route path="/signup"  component={SignUp} />
+                  <Route path="/login"  component={Login} />
+
+                  <PrivateRoute path="/profile" component={Profile} redirections="/login"/> 
+                  
+                </Switch>
+              </AuthProvider>
             </Router>
   );
 }
