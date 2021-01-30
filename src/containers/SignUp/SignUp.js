@@ -1,4 +1,4 @@
-import React, {useRef, useState } from 'react';
+import React, {useRef } from 'react';
 import { useHistory} from 'react-router-dom';
 import { useAuth } from '../../utils/auth/AuthContext';
 
@@ -11,27 +11,22 @@ const SignUp = () => {
     const confirmPasswordRef= useRef();
 
     const { signUp } = useAuth();
-    const [error, setError] = useState('');
-    const [loading, setLoading] = useState(false);
     const history = useHistory();
 
     async function handleSubmit(e){
         e.preventDefault();
 
         if(passwordRef.current.value !== confirmPasswordRef.current.value){
-            return setError('Passoword do not match')
+            return 
         }
         try{
-            setError('');
-            setLoading(true);
-            
+           
             await signUp(emailRef.current.value, passwordRef.current.value);
 
             history.replace("/profile");
         }catch(e){
-            setError('Failed to Create Account');
+            
         }
-        setLoading(false);
     }
 
     return ( 
