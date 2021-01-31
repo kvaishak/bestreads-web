@@ -8,6 +8,7 @@ import Login from './LogIn/LogIn';
 import Profile from './Profile/Profile';
 
 import Home from '../components/Home/Home';
+import Dashboard from '../components/Dashboard/Dashboard';
 import PrivateRoute from '../HOC/PrivateRoute';
 
 
@@ -21,7 +22,8 @@ function App() {
                   <Route path="/signup"  component={SignUp} />
                   <Route path="/login"  component={Login} />
 
-                  <PrivateRoute path="/profile" component={Profile} redirections="/login"/> 
+                  <PrivateRoute path="/profile" component={Profile} redirections="/login" /> 
+                  <PrivateRoute path="/dashboard" component={Dashboard} redirections="/login" />
                   
                 </Switch>
               </AuthProvider>

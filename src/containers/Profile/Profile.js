@@ -8,13 +8,21 @@ import ProfileUI from '../../components/ProfileUI/ProfileUI';
 const Profile = () => {
 
     const { currentUser } = useAuth();
-    console.log(currentUser);
+    const username = fetchUserName(currentUser);
 
     return ( 
         <Layout>
-            <ProfileUI userEmail={currentUser && currentUser.email}/>
+            <ProfileUI userName={username}/>
         </Layout>
      );
+}
+
+const fetchUserName = (currentUser) => {
+    let username = "Anonymous";
+    if(currentUser){
+        username = currentUser.displayName ? currentUser.displayName : currentUser.email.split('@')[0];
+    }
+    return username;
 }
 
 export default Profile;
