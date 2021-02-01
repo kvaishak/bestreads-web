@@ -8,7 +8,7 @@ import Login from './LogIn/LogIn';
 import Profile from './Profile/Profile';
 
 import Home from '../components/Home/Home';
-import Dashboard from '../components/Dashboard/Dashboard';
+import Dashboard from './Dashboard/Dashboard';
 import PrivateRoute from '../HOC/PrivateRoute';
 
 
