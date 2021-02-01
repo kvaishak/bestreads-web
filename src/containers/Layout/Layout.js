@@ -3,6 +3,7 @@ import { useHistory} from 'react-router-dom';
 import { useAuth } from '../../utils/auth/AuthContext';
 
 import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 
 const Layout = (props) => {
@@ -20,6 +21,7 @@ const Layout = (props) => {
         <React.Fragment>
             <Navbar logoutHandler={handleLogout}/>
             {props.children}
+            <Footer />
         </React.Fragment>
      );
 }
