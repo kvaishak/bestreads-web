@@ -1,6 +1,6 @@
 import React, {useRef } from 'react';
 import { useHistory} from 'react-router-dom';
-import { useAuth } from '../../utils/auth/AuthContext';
+import { useAuth } from '../../utils/firebase/AuthContext';
 
 import SignUpUI from '../../components/SignUpUI/SignUpUI'
 

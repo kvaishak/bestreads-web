@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAuth } from '../../utils/auth/AuthContext';
+import { useAuth } from '../../utils/firebase/AuthContext';
 
 import Layout from '../Layout/Layout'
 import ProfileUI from '../../components/ProfileUI/ProfileUI';
