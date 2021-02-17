@@ -1,5 +1,6 @@
 import React from 'react'
 import CurrentBookUI from '../CurrentBookUI/CurrentBookUI'
+import AddBookUI from '../AddBookUI/AddBookUI'
 
 function CurrentSectionUI(props) {
 
@@ -24,7 +25,8 @@ function CurrentSectionUI(props) {
             'description': 'Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.',
             'page': '23',
             'id': '789'
-        }
+        },
+       
             
     ];
 
@@ -45,6 +47,7 @@ function CurrentSectionUI(props) {
             </div>
             <div className="flex flex-wrap -m-4">
                 {booksContainer}
+                <AddBookUI />
             </div>
         </div>
     </section>              
