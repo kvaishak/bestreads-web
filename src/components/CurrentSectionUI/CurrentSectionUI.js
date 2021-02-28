@@ -4,31 +4,29 @@ import AddBookUI from '../AddBookUI/AddBookUI'
 
 function CurrentSectionUI({books}) {
 
-    const tempBooks = [
-        {
-            'bookName': '1984',
-            'authorName': 'Orwell, George',
-            'description': 'Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.',
-            'pageNo': '23',
-            'id': '123'
-        },
-        {
-            'bookName': '1984',
-            'authorName': 'Orwell, George',
-            'description': 'Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.',
-            'pageNo': '23',
-            'id': '456'
-        },
-        {
-            'bookName': '1984',
-            'authorName': 'Orwell, George',
-            'description': 'Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.',
-            'pageNo': '23',
-            'id': '789'
-        },
-       
-            
-    ];
+    // const tempBooks = [
+    //     {
+    //         'bookName': '1984',
+    //         'authorName': 'Orwell, George',
+    //         'description': 'Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.',
+    //         'pageNo': '23',
+    //         'id': '123'
+    //     },
+    //     {
+    //         'bookName': '1984',
+    //         'authorName': 'Orwell, George',
+    //         'description': 'Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.',
+    //         'pageNo': '23',
+    //         'id': '456'
+    //     },
+    //     {
+    //         'bookName': '1984',
+    //         'authorName': 'Orwell, George',
+    //         'description': 'Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.',
+    //         'pageNo': '23',
+    //         'id': '789'
+    //     },  
+    // ];
 
     const booksContainer = books.map(book => {
         return (

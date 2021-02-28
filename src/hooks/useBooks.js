@@ -33,7 +33,7 @@ export function useBooks() {
                     payload: {books: docs.docs.map(doc => database.formatDoc(doc))},
                 });
             });
-    },[]);
+    },[currentUser]);
 
     useEffect(() => {
         database.books
@@ -44,7 +44,7 @@ export function useBooks() {
                     payload: {books: snapshot.docs.map(doc => database.formatDoc(doc))},
                 });
             })
-    },[]);
+    },[currentUser]);
 
     function updatePages(){
 
