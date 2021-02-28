@@ -6,3 +6,5 @@ yarn-error.log
 build
 
 .env.local
+
+.idea

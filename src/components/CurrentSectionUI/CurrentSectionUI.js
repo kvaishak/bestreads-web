@@ -2,28 +2,28 @@ import React from 'react'
 import CurrentBookUI from '../CurrentBookUI/CurrentBookUI'
 import AddBookUI from '../AddBookUI/AddBookUI'
 
-function CurrentSectionUI(props) {
+function CurrentSectionUI({books}) {
 
-    const books = [
+    const tempBooks = [
         {
-            'title': '1984',
-            'author': 'Orwell, George',
+            'bookName': '1984',
+            'authorName': 'Orwell, George',
             'description': 'Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.',
-            'page': '23',
+            'pageNo': '23',
             'id': '123'
         },
         {
-            'title': '1984',
-            'author': 'Orwell, George',
+            'bookName': '1984',
+            'authorName': 'Orwell, George',
             'description': 'Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.',
-            'page': '23',
+            'pageNo': '23',
             'id': '456'
         },
         {
-            'title': '1984',
-            'author': 'Orwell, George',
+            'bookName': '1984',
+            'authorName': 'Orwell, George',
             'description': 'Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.',
-            'page': '23',
+            'pageNo': '23',
             'id': '789'
         },
        

@@ -16,6 +16,9 @@ export const auth = app.auth();
 const firestore = app.firestore();
 export const database = {
     books: firestore.collection('books'),
-    getCurrentTimeStamp: firebase.firestore.FieldValue.serverTimestamp
+    getCurrentTimeStamp: firebase.firestore.FieldValue.serverTimestamp,
+    formatDoc: doc => {
+        return { id: doc.id, ...doc.data() }
+    },
 }
 export default app;
