@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import { AuthProvider } from '../utils/auth/AuthContext';
+import { AuthProvider } from '../utils/firebase/AuthContext';
 
 import SignUp from './SignUp/SignUp';
 import Login from './LogIn/LogIn';

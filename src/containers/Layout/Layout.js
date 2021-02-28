@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory} from 'react-router-dom';
-import { useAuth } from '../../utils/auth/AuthContext';
+import { useAuth } from '../../utils/firebase/AuthContext';
 
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
