@@ -46,12 +46,31 @@ export function useBooks() {
             })
     },[currentUser]);
 
-    function updatePages(){
+    function newBook(bookName, authorName, pageNo = 1, status = 'CURRENTLY_READING'){
+         database.books.add({
+            bookName,
+            authorName,
+            pageNo,
+            status,
+            userId: currentUser.uid,
+            createdAt: database.getCurrentTimeStamp()
+        });
+    }
 
+    function deleteBook(id){
+        database.books.doc(id).delete().then(() => console.log("Deleted"));
+    }
+
+    function updateBook(id, updatedProps){
+        database.books.doc(id).update({
+            ...updatedProps
+        }).then(() => console.log("Updated"));
     }
 
     return {
         data: state,
-        updatePages
+        newBook,
+        deleteBook,
+        updateBook
     }
 }

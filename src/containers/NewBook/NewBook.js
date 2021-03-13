@@ -1,27 +1,20 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import NewBookUI from '../../components/NewBookUI/NewBookUI';
-import {database} from '../../utils/firebase/firebase';
-import {useAuth} from '../../utils/firebase/AuthContext';
+import { useBooks } from '../../hooks/useBooks'
 
 function NewBook(props) {
+    const { newBook } = useBooks();
 
-    const {currentUser} = useAuth();
     const bookRef = useRef();
     const authorRef = useRef();
 
     async function handleSubmit(e){
         e.preventDefault();
-        console.log(bookRef.current.value);
-        console.log(authorRef.current.value);
         
-        database.books.add({
-            bookName: bookRef.current.value,
-            authorName: authorRef.current.value,
-            pageNo: 1,
-            status: 'CURRENTLY_READING',
-            userId: currentUser.uid,
-            createdAt: database.getCurrentTimeStamp()
-        });
+        newBook(
+            bookRef.current.value,
+            authorRef.current.value,
+        );
 
         props.close();
     }
