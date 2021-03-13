@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { useBooks } from '../../hooks/useBooks'
+import { useBooks,  bookStatus} from '../../hooks/useBooks'
 
 function CurrentBookUI({book}) {
     
@@ -19,6 +19,12 @@ function CurrentBookUI({book}) {
       pageNo: updatedPageNumber
     });
     pageNoRef.current.value = updatedPageNumber;
+  }
+
+  function updateBookStatus(){
+    updateBook(book.id, {
+      status: bookStatus.finishedReading
+    });
   }
 
   return (
@@ -53,7 +59,7 @@ function CurrentBookUI({book}) {
         <div className="flex flex-wrap mt-8 -mx-3">
         
           <div className="px-3 w-3/4">
-            <button className="w-full px-8 py-2 font-semibold text-black transition duration-500 ease-in-out transform bg-white border rounded-lg shadow-xl hover:text-white hover:border-black hover:bg-black focus:shadow-outline focus:outline-none">Finished Reading</button>
+            <button onClick={updateBookStatus} className="w-full px-8 py-2 font-semibold text-black transition duration-500 ease-in-out transform bg-white border rounded-lg shadow-xl hover:text-white hover:border-black hover:bg-black focus:shadow-outline focus:outline-none">Finished Reading</button>
           </div>
 
           <div className="px-3 w-1/4">

@@ -7,6 +7,11 @@ const ACTIONS = {
     FETCH_USER_BOOKS: "fetch-books"
 }
 
+export const bookStatus = {
+    currentlyReading: "CURRENTLY_READING",
+    finishedReading: "FINISHED_READING"
+}
+
 function reducer(state, { type, payload }) {
     switch (type) {
         case ACTIONS.FETCH_USER_BOOKS:
@@ -46,7 +51,7 @@ export function useBooks() {
             })
     },[currentUser]);
 
-    function newBook(bookName, authorName, pageNo = 1, status = 'CURRENTLY_READING'){
+    function newBook(bookName, authorName, pageNo = 1, status = bookStatus.currentlyReading){
          database.books.add({
             bookName,
             authorName,
