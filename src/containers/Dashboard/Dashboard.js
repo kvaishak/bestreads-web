@@ -28,7 +28,7 @@ const Dashboard = () => {
 
     return ( 
         <Layout>
-            {currentlyReadingBooks.length > 0 && <CurrentSectionUI books={currentlyReadingBooks}/>}
+            <CurrentSectionUI books={currentlyReadingBooks}/>
             {finishedReadingBooks.length > 0 && <FinishedSectionUI books={finishedReadingBooks}/>}
         </Layout>
      );
