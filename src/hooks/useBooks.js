@@ -9,7 +9,8 @@ const ACTIONS = {
 
 export const bookStatus = {
     currentlyReading: "CURRENTLY_READING",
-    finishedReading: "FINISHED_READING"
+    finishedReading: "FINISHED_READING",
+    toRead: "TO_READ"
 }
 
 function reducer(state, { type, payload }) {
@@ -51,7 +52,7 @@ export function useBooks() {
             })
     },[currentUser]);
 
-    function newBook(bookName, authorName, pageNo = 1, status = bookStatus.currentlyReading){
+    function newBook(bookName, authorName, status = bookStatus.currentlyReading, pageNo = 1,){
          database.books.add({
             bookName,
             authorName,

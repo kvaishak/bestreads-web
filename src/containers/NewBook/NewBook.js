@@ -7,6 +7,7 @@ function NewBook(props) {
 
     const bookRef = useRef();
     const authorRef = useRef();
+    const bookStatusRef = useRef();
 
     async function handleSubmit(e){
         e.preventDefault();
@@ -14,6 +15,7 @@ function NewBook(props) {
         newBook(
             bookRef.current.value,
             authorRef.current.value,
+            bookStatusRef.current.value
         );
 
         props.close();
@@ -24,6 +26,7 @@ function NewBook(props) {
             close={props.close}
             bookRef={bookRef}
             authorRef={authorRef}
+            bookStatusRef={bookStatusRef}
             handleSubmit={handleSubmit}    
         />
   );

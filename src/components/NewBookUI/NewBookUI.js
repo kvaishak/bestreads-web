@@ -33,6 +33,17 @@ function NewBookUI(props) {
                               className="w-full px-4 py-2 mt-2 text-base bg-gray-100 border-transparent rounded-lg ext-blue-700 focus:border-gray-500"
                                autoComplete="true" required />
                       </div>
+
+                      <div className="mt-4">
+                          <label className="block text-base font-medium leading-relaxed text-gray-700">Book Status</label>
+                          <select type="status" name="" id="" placeholder="Reading" ref={props.bookStatusRef}
+                              className="w-full px-4 py-2 mt-2 text-base bg-gray-100 border-transparent rounded-lg ext-blue-700 focus:border-gray-500"
+                              required> 
+                              <option value="CURRENTLY_READING">Currently Reading</option>
+                              <option value="FINISHED_READING">Finished Reading</option>
+                              <option value="TO_READ">To Read</option>   
+                          </select>
+                      </div>
                                             
                       <button type="submit" onClick={props.handleSubmit} className="block w-full px-4 py-3 mt-6 font-semibold text-white transition duration-500 ease-in-out transform rounded-lg bg-gradient-to-r from-blue-700 hover:from-blue-500 to-blue-500 hover:to-blue-700 focus:shadow-outline focus:outline-none">Add Book</button>
         
