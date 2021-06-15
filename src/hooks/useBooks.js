@@ -30,6 +30,9 @@ export function useBooks() {
     })
     const { currentUser } = useAuth()
 
+    //TODO: Move all the actions to be performed on the books to the userReducer.
+    //Why is that just used for returning the books
+
     useEffect(() => {
         return database.books
             .where("userId", "==", currentUser.uid)
