@@ -6,3 +6,4 @@ Prototype application to provide a better and visualy pleasing alternative to go
 
 - React
 - Firebase as Database and Authentication
+- Netlify for hosting
