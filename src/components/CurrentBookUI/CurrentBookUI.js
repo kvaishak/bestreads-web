@@ -12,7 +12,9 @@ function CurrentBookUI({ book }) {
   }
 
   function pageNoController(isIncrement) {
-    const updatedPageNumber = isIncrement ? book.pageNo + 1 : book.pageNo - 1;
+    const updatedPageNumber = isIncrement
+      ? parseInt(book.pageNo) + 1
+      : parseInt(book.pageNo) - 1;
     updateBook(book.id, {
       pageNo: updatedPageNumber,
     });

@@ -11,7 +11,6 @@ import Loader from "../../utils/Loader/Loader";
 const Dashboard = () => {
   const { data } = useBooks();
 
-  console.log("hello there");
   console.log(data.books);
   var currentlyReadingBooks = [],
     finishedReadingBooks = [],
