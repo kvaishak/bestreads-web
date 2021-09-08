@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 function Footer(props) {
-    return(
-        <footer className="mt-10 text-gray-700 bg-white border-t body-font">
-            <div className="border-t border-gray-200">
-                <div className="container flex flex-col flex-wrap items-center justify-between p-5 mx-auto md:flex-row">
+  return (
+    <footer className="mt-20 text-gray-700 bg-white border-t body-font">
+      <div className="border-t border-gray-200">
+        {/* <div className="container flex flex-col flex-wrap items-center justify-between p-5 mx-auto md:flex-row">
                     <span className="flex items-center w-48 mb-4 font-medium text-gray-900 title-font md:mb-0">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-blue-800 rounded-full" viewBox="0 0 24 24">
                         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
@@ -46,15 +46,16 @@ function Footer(props) {
                             </span>
                         </span>
                     </div>
-                </div>
-                <div
-                    className="flex flex-wrap items-center justify-center py-6 mx-auto text-base bg-blue-900 ">
-                    <p className="text-sm text-center text-gray-200 ">© Your Company — 2020
-                    </p>
-                </div>
-            </div>
-        </footer>
-    )
-};
+                </div> */}
+
+        <div className="flex flex-wrap items-center justify-center py-6 mx-auto text-base bg-blue-900 ">
+          <p className="text-sm text-center text-gray-200 ">
+            © Your Company — 2020
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
 
 export default Footer;

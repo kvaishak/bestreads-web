@@ -4,7 +4,7 @@ import person from "../../assets/images/people_1.png";
 function ProfileUI(props) {
   return (
     <section className="text-gray-700 body-font">
-      <div className="container flex flex-col items-center px-5 py-16 mx-auto lg:px-20 lg:py-24 md:flex-row">
+      <div className="container flex flex-col items-center px-5 py-28 mx-auto lg:px-20 lg:py-12 md:flex-row">
         <div className="w-5/6 mb-10 lg:max-w-lg lg:w-full md:w-1/2 md:mb-0">
           <img
             className="object-cover object-center rounded"
