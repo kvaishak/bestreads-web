@@ -50,7 +50,7 @@ function Footer(props) {
 
         <div className="flex flex-wrap items-center justify-center py-6 mx-auto text-base bg-blue-900 ">
           <p className="text-sm text-center text-gray-200 ">
-            © Your Company — 2020
+            © Bestreads — 2021
           </p>
         </div>
       </div>
